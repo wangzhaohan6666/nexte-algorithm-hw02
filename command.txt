@@ -1,0 +1,14 @@
+git config user.name "wangzhaohan"
+git config user.email "647836680@qq.com"
+git status
+git diff
+git log --oneline --graph --all
+git add README.md .gitignore CMakeLists.txt commands.txt src/ tests/
+git commit -m "Initialize C++ project"
+git switch -c feature/algorithms
+git switch main
+git merge feature/algorithms
+git push -u origin main
+cmake -S . -B build
+cmake --build build
+./build/streak < tests/streak_sample.in
